@@ -1,5 +1,5 @@
 streamlit
-git+https://github.com/andfanilo/streamlit-drawable-canvas.git
+streamlit-drawable-canvas-fix
 replicate
 Pillow
 numpy
