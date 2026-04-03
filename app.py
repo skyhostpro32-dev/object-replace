@@ -5,16 +5,16 @@ import replicate
 # --- REPLICATE AUTHENTICATION FIX ---
 # Priority 1: Streamlit Secrets (Recommended for Cloud)
 if "REPLICATE_API_TOKEN" in st.secrets:
-    os.environ["REPLICATE_API_TOKEN"] = st.secrets["REPLICATE_API_TOKEN"]
+    os.environ["REPLICATE_API_TOKEN"] = st.secrets["r8_4qjl5N3LvlKM9UZGEfZ1V0fkrGaEmoT4ChEcV"]
 
 # Priority 2: Manual Sidebar Input (For debugging)
 st.sidebar.subheader("API Configuration")
 manual_token = st.sidebar.text_input("Replicate Token (r8_...)", type="password")
 if manual_token:
-    os.environ["REPLICATE_API_TOKEN"] = manual_token
+    os.environ["r8_4qjl5N3LvlKM9UZGEfZ1V0fkrGaEmoT4ChEcV"] = manual_token
 
 # Check if it's working
-current_token = os.environ.get("REPLICATE_API_TOKEN", "")
+current_token = os.environ.get("r8_4qjl5N3LvlKM9UZGEfZ1V0fkrGaEmoT4ChEcV", "")
 if not current_token:
     st.error("⚠️ No API Token found. Please add it to Streamlit Secrets or the sidebar.")
     st.stop()
